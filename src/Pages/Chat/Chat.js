@@ -114,7 +114,7 @@ export default class Chat extends React.Component {
         this.state.displayedContactswithNotification.forEach((el)=>{
                            
           if(el.notificationId.length > 0){
-            if(el.notificationId != itemId){
+            if(el.notificationId !== itemId){
           
               this.notificationMessagesErase.push(
                   {
@@ -144,7 +144,7 @@ export default class Chat extends React.Component {
           let viewListUser = []
           let classname = ''
           this.searchUsers.map((item)=>{   
-            if(item.id != this.currentUserId){
+            if(item.id !== this.currentUserId){
                classname = this.getClassnameforUserandNotification(item.id)
               viewListUser.push(
                 
@@ -207,7 +207,7 @@ export default class Chat extends React.Component {
           let viewListUser = []
           let classname = ''
           this.displayedContacts.map((item)=>{   
-            if(item.id != this.currentUserId){
+            if(item.id !== this.currentUserId){
                classname = this.getClassnameforUserandNotification(item.id)
               viewListUser.push(
                 
